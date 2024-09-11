@@ -10,6 +10,6 @@ multiplier_for_products=water_quantity//base_water_qtt
 print(f"""
 Voici les matériaux requis pour l'assainissement de {water_quantity} L d'eau
 Nombre de filtre(s): {base_filter_qtt*multiplier_for_products}
-Nombre de lampe uv: {base_uv_lamp_qtt*multiplier_for_products}
-Quantité de clhore: {base_chlore_qtt*multiplier_for_products} kg
+Nombre de lampe(s) uv: {base_uv_lamp_qtt*multiplier_for_products}
+Quantité de chlore: {base_chlore_qtt*multiplier_for_products} kg
 """)
