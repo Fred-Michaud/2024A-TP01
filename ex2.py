@@ -1,7 +1,7 @@
 # TODO: Créer un script pour calculer les ressources nécessaires pour assainir la Seine.
 # TODO: Importer les modules nécessaires.
 
-water_quantity = int(input("Quel est la quantité d'eau à asseinir?: "))
+water_quantity = int(input("Quel est la quantité d'eau à assainir?: "))
 base_water_qtt=5
 base_filter_qtt=1
 base_uv_lamp_qtt=3
