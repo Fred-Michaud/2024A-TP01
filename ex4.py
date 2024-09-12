@@ -9,15 +9,15 @@ substitute=battery_level
 number_km_possible=0
 
 while substitute !=0:
-    if substitute>50 and substitute <= 100:
+    if substitute>=50 and substitute <= 100:
         number_km_per_litter=2
-    elif substitute>25 and substitute <= 50:
+    elif substitute>=25 and substitute <= 50:
         number_km_per_litter=0.5
-    elif substitute>10 and substitute <= 25:
+    elif substitute>=10 and substitute <= 25:
         number_km_per_litter=1
-    elif substitute>5 and substitute <= 10:
+    elif substitute>=5 and substitute <= 10:
         number_km_per_litter=2.5
-    elif substitute>0 and substitute <= 5:
+    elif substitute>=0 and substitute <= 5:
         number_km_per_litter=6
     
     if(substitute >=1 ):
