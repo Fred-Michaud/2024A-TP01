@@ -51,16 +51,16 @@ class TestExercice2(unittest.TestCase):
 
     def test_standard_water(self):
         water_quantity = 5.0
-        expected_filter = 1.0
-        expected_light = 3.0
+        expected_filter = 1
+        expected_light = 3
         expected_chlorine = 0.5
         self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
 
     def test_standard_water_float(self):
-        water_quantity = 2.0
-        expected_filter = 0.4
-        expected_light = 1.2
-        expected_chlorine = 0.2
+        water_quantity = 35.0
+        expected_filter = 7
+        expected_light = 21
+        expected_chlorine = 3.5
         self.format_tests(water_quantity, expected_filter, expected_light, expected_chlorine)
 
 class TestExercice3(unittest.TestCase): 
@@ -147,7 +147,7 @@ class TestExercice5(unittest.TestCase):
         medals = "GSBS"
         simulated_inputs = f"{country}\n{medals}"
         output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}{country}:\n- 1 OR\n- 2 Argent\n- 1 Bronze\n"
+        expected = f"{self.input_questions}{country}:\n- 1 Or\n- 2 Argent\n- 1 Bronze\n"
         self.assertEqual(output, expected)
 
 
@@ -156,7 +156,15 @@ class TestExercice5(unittest.TestCase):
         medals = "GSBSSGBSGSSGBSBBBGGSSSS"
         simulated_inputs = f"{country}\n{medals}"
         output = self.runner.run(simulated_inputs)
-        expected = f"{self.input_questions}{country}:\n- 6 OR\n- 11 Argent\n- 6 Bronze\n"
+        expected = f"{self.input_questions}{country}:\n- 6 Or\n- 11 Argent\n- 6 Bronze\n"
+        self.assertEqual(output, expected)
+    
+    def test_wrong_str(self):
+        country = "CAN"
+        medals = "A"
+        simulated_inputs = f"{country}\n{medals}"
+        output = self.runner.run(simulated_inputs)
+        expected = f"{self.input_questions}Ceci est une chaine invalide.\n"
         self.assertEqual(output, expected)
 
 if __name__ == "__main__": 
