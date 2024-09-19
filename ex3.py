@@ -6,7 +6,6 @@ import math
 speed = float(input("Vitesse initiale (m/s): "))
 angle = float(input("Angle de lancer (en degrés): "))
 
-#Constantes
 g = 9.8
 distance = ((speed**2)*(math.sin(math.radians(2*angle))))/9.8
 distance_arrondie = round(distance, 2)
